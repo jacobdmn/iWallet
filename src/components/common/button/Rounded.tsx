@@ -15,11 +15,13 @@ const RoundedButton: React.FC<RoundedButtonProps> = ({
     <div
       className={`flex flex-col gap-2 items-center text-beta-400 hover:text-beta-500`}>
       <button
-        className={`rounded-full min-w-16 min-h-16 max-w-16 max-h-16 border-current ${
+        className={`rounded-full min-w-16 min-h-16 max-w-16 max-h-16 border-current p-4 flex items-center justify-center
+        ${
           variant === "contained"
-            ? "bg-beta-500 hover:bg-beta-600"
+            ? "text-white bg-beta-500 hover:bg-beta-600"
             : "border-[1.5px] text-inherit"
-        } text-white p-4 flex items-center justify-center`}
+        }
+         `}
         onClick={onClick}>
         {icon}
       </button>

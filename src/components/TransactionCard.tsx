@@ -1,6 +1,11 @@
 import { Transaction } from "@/models/Transaction";
 import { shortenAddress, formatEthValue } from "@/utils/functions";
 import { IconType } from "react-icons";
+import {
+  AiOutlineArrowDown,
+  AiOutlineArrowUp,
+  AiOutlineCloudDownload,
+} from "react-icons/ai";
 import { RiArrowUpDownLine, RiArrowRightSLine } from "react-icons/ri";
 
 type TransactionType = "sent" | "received" | "pending";
@@ -8,11 +13,11 @@ type TransactionType = "sent" | "received" | "pending";
 const getIcon = (type: TransactionType): IconType => {
   switch (type) {
     case "sent":
-      return RiArrowUpDownLine;
+      return AiOutlineArrowUp;
     case "received":
-      return RiArrowRightSLine;
+      return AiOutlineArrowDown;
     case "pending":
-      return RiArrowRightSLine;
+      return AiOutlineCloudDownload;
     default:
       return RiArrowUpDownLine;
   }

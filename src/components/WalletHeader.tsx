@@ -1,5 +1,5 @@
-import { FiLink, FiSend } from "react-icons/fi";
-import { AiOutlineCopy } from "react-icons/ai";
+import { FiCopy, FiSend } from "react-icons/fi";
+import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import RoundedButton from "./common/button/Rounded";
 import formatThousands from "format-thousands";
 import { useRouter } from "next/router";
@@ -38,12 +38,12 @@ const WalletHeader: React.FC<WalletHeaderProps> = ({
         />
         <RoundedButton
           label='receive'
-          icon={<FiLink />}
+          icon={<AiOutlineArrowDown />}
           onClick={onRequestClick || (() => {})}
         />
         <RoundedButton
           label='copy'
-          icon={<AiOutlineCopy />}
+          icon={<FiCopy />}
           onClick={onSwapClick || (() => {})}
         />
       </div>
