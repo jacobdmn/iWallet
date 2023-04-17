@@ -1,7 +1,9 @@
-export interface Transaction {
-    hash: string,
-    from_address: string,
-    to_address: string,
-    value: string,
-    block_timestamp: string,
+export type Transaction = {
+  from: string;
+  to: string;
+  value: number;
+  currency: string;
+  direction: "sent" | "received" | "pending";
 };
+
+export type Transactions = Transaction[];

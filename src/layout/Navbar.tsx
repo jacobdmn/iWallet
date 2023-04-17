@@ -16,7 +16,7 @@ const links = [
   {
     href: "/send",
     icon: <AiOutlineSend size={24} />,
-    text: "Send Money",
+    text: "Send",
   },
   {
     href: "/settings",
@@ -29,7 +29,7 @@ const MobileNavbar: React.FC = () => {
   const router = useRouter();
 
   return (
-    <nav className='sticky bottom-0 left-0 right-0 bg-black/80 shadow-lg flex justify-around py-4 rounded-full px-4'>
+    <nav className='sticky bottom-4 ml-[2%] w-[96%] bg-black/80 shadow-lg flex justify-around py-4 rounded-full px-4'>
       {links.map((link) => (
         <Link
           key={link.href}
