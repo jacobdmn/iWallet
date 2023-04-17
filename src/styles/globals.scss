@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+html {
+  // background-color: black;
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-alpha text-omega-300;
+  }
+}
+
+@layer utilities {
+  $gradient-alpha: #00090fe0 30%, #011423db 65%, #001629de 80%, #00111fd9 95%;
+
+  .bg-gradient-alpha {
+    backdrop-filter: none;
+    background-image: linear-gradient(130deg, $gradient-alpha);
+  }
+}
